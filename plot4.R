@@ -21,15 +21,14 @@
 ##Start Plotting the four graphs, open to save in png file
   
   png(filename="plot4.png", width = 480, height = 480, units = "px")
+
 #Plot1
+ 
   par(mfrow=c(2,2))
   plot(dataset.sub$date_time, as.numeric(as.character(dataset.sub$Global_active_power)), type = "l", ylab= "Global Active Power", xlab="")
   
-  ##hist(as.numeric(as.character(dataset.sub$Global_active_power)), main="Global Active Power", ylab = "Frequency", xlab="Global Active Power (kilowatts)", col="red")
-  
 #Plot 2
   plot(dataset.sub$date_time, as.numeric(as.character(dataset.sub$Voltage)), type = "l", ylab= "Voltage", xlab="datetime")
-  
   
 #Plot 3
   
@@ -41,4 +40,3 @@
 #Plot 4, this is the new plot for Global reactive power against time
   plot(dataset.sub$date_time, as.numeric(as.character(dataset.sub$Global_reactive_power)), type = "l", ylab= "global_reactive_power", xlab="datetime")
   dev.off()
-  
